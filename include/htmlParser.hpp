@@ -9,20 +9,20 @@
 
 class htmlDownloader;
 struct url {
-  std::string domen;
-  std::string uri;
+  std::string domen; //домен
+  std::string uri; //адрес после названия сайта
 };
-class htmlParser {
+class htmlParser { //
  private:
-  ThreadPool parserPool_;
-  outPut& outputObj_;
+  ThreadPool parserPool_; //пулл потоков парсера
+  outPut& outputObj_; //ссылка на объект отвечающий за вывод в файла
   void collectIMG(std::vector<std::string> pages, htmlDownloader& downloader,
-                  int depth);
+                  int depth); //метод собирает ссылки на картинки
 
  public:
-  htmlParser(outPut& outputObj, int threadNum)
+  htmlParser(outPut& outputObj, int threadNum) //инциализация полей через конструкторы
       : parserPool_(threadNum), outputObj_(outputObj) {}
-  void startParse(std::vector<std::string> pages, htmlDownloader& downloader,
+  void startParse(std::vector<std::string> pages, htmlDownloader& downloader, //передаем массив аштималей, ссылку на объект аштималь даунлодера и глубину
                   int depth);
 
   /*static std::vector<std::string> collectLinks(std::vector<std::string>

@@ -17,11 +17,11 @@ int main(int argc, char* argv[]) {
       ("depth",po::value<int>(), "page search depth")
       ("output",po::value<std::string>(),"path to output file")
       ;
-  po::variables_map vm;
+  po::variables_map vm; //в вм будет ключ аргумент
   po::store(po::parse_command_line(argc, argv, desc), vm);
   po::notify(vm);
-
-  outPut output = outPut(vm["output"].as<std::string>());
+ //получаю значение аргументов по ключам словаря (--    это ключ)
+  outPut output = outPut(vm["output"].as<std::string>()); //хранится путь к файлу
   htmlParser parser = htmlParser(output, vm["parser_threads"].as<int>());
   htmlDownloader downloader =
       htmlDownloader(parser, vm["network_threads"].as<int>());
@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
   }
   url url = {vm["url"].as<std::string>(), "/"};
 
-  downloader.startDownload({url}, vm["depth"].as<int>());
-  int tmp;
+  downloader.startDownload({url}, vm["depth"].as<int>()); //запуск краулера
+  int tmp; //чтобы программа не заканчивалась
   std::cin >> tmp;
 }

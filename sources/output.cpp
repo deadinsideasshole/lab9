@@ -7,7 +7,7 @@
 
 #include "ThreadPool.h"
 void outPut::writeFile(std::vector<std::string> imgs) {
-  try {
+  try { //пытаемся идти по каждой ссылке и записываем в файл, если ошибка то выводим ошибку
     for (auto& img : imgs) {
       file << img << std::endl;
     }
@@ -15,10 +15,9 @@ void outPut::writeFile(std::vector<std::string> imgs) {
     std::cerr << e.what() << std::endl;
   }
 
-  std::cout << path_ << std::endl;
 }
 
-void outPut::writeIMG(std::vector<std::string> imgs) {
+void outPut::writeIMG(std::vector<std::string> imgs) { //добавление новое задание в пулл потоков вывода
   pool.enqueue([imgs, this]() {
     this->writeFile(imgs);
   });
