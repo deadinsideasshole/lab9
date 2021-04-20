@@ -43,7 +43,7 @@ static void search_for_links(GumboNode* node, std::vector<url>& links) {
     if (host.find("http://") == 0) host = host.substr(7);
     size_t i = 0;
     if (host.size() != 0) {
-      for ( ;i < host.size(); ++i) {
+      for ( ; i < host.size(); ++i) {
         if ((host[i] == '/') || (host[i] == '?')) break;
       }
     } else {

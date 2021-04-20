@@ -24,6 +24,5 @@ class htmlParser {
       : parserPool_(threadNum), outputObj_(outputObj) {}
   void startParse(std::vector<std::string> pages, htmlDownloader& downloader,
                   int depth);
-
 };
 #endif  // INCLUDE_HTMLPARSER_HPP_

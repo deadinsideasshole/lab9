@@ -14,7 +14,6 @@ void outPut::writeFile(std::vector<std::string> imgs) {
   } catch (std::exception& e) {
     std::cerr << e.what() << std::endl;
   }
-
 }
 
 void outPut::writeIMG(std::vector<std::string> imgs) {
