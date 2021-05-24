@@ -1,4 +1,4 @@
-// Copyright 2020 BoryaBes <box.bern@yandex.ru>
+// Copyright 2021 ivan <ikhonyak@gmail.com>
 
 #include "output.hpp"
 

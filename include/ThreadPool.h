@@ -1,3 +1,4 @@
+// Copyright 2021 ivan <ikhonyak@gmail.com>
 #ifndef THREAD_POOL_H
 #define THREAD_POOL_H
 

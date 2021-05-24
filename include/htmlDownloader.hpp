@@ -1,4 +1,4 @@
-// Copyright 2020 BoryaBes <box.bern@yandex.ru>
+// Copyright 2021 ivan <ikhonyak@gmail.com>
 
 #ifndef INCLUDE_HTMLDOWNLOADER_HPP_
 #define INCLUDE_HTMLDOWNLOADER_HPP_
