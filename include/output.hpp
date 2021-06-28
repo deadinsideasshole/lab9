@@ -1,4 +1,4 @@
-// Copyright 2021 ivan <ikhonyak@gmail.com>
+// Copyright 2021 roman <roman.sekin.90@nail.ru>
 #ifndef INCLUDE_OUTPUT_HPP_
 #define INCLUDE_OUTPUT_HPP_
 #include "ThreadPool.h"
